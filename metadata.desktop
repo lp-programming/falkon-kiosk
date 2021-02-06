@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Kiosk Mode
+Comment=Single tab, undecorated
+Icon=
+Type=Service
+X-Falkon-Type=Extension/Python
+
+X-Falkon-Author=Logan Perkins
+X-Falkon-Email=logan@falkon.lp-programming.com
+X-Falkon-Version=0.1.0
