@@ -2,10 +2,6 @@ import PyFalkon
 import PyFalkon as Falkon
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtWidgets import QListWidget, QWidget, QMessageBox, QApplication, QVBoxLayout, QLineEdit
-import uuid
-from functools import partial
-import os
-import subprocess
 import PySide2
     
 class RequestInterceptor(PySide2.QtWebEngineCore.QWebEngineUrlRequestInterceptor):
@@ -31,7 +27,6 @@ class KioskPlugin(PyFalkon.PluginInterface, QtCore.QObject):
         window.toggleShowMenubar()
         window.menuBar().hide()
         window.menuWidget().hide()
-        print([i for i in dir(window.tabWidget().webTab(0).webView()) if 'page' in i])
         tab = window.tabWidget().webTab(0)
         tab.webView().urlChanged.connect(self.singleURL)
 
